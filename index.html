@@ -61,9 +61,10 @@
         <script>
             let input = document.getElementById('LocationButton')
             input.addEventListener('click', function() {
-                let privacy = ''
-                privacy.getCurrentPosition(position)
-                privacy = position.coords.latitude + "," + position.coords.longitude
+                let privacy = '';
+                let position = '';
+                navigator.geolocation.getCurrentPosition(position);
+                privacy = position.coords.latitude + "," + position.coords.longitude;
                 document.div.querySelector('location').innerHTML += privacy;
             })
         </script>
