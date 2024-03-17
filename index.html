@@ -56,7 +56,7 @@
             Your Location
         </button>
         <div id="location">
-
+            Here
         </div>
         <script>
             let input = document.getElementById('#LocationButton')
@@ -65,7 +65,7 @@
                 navigator.geolocation.getCurrentPosition(function(position) {
                     privacy = position.coords.latitude + "," + position.coords.longitude
                 })
-               alert(privacy)
+                document.querySelector('#location').innerHTML += "<p>こんにちは</p>";
             })
         </script>
 
