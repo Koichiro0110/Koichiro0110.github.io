@@ -59,13 +59,13 @@
             Here
         </div>
         <script>
-            let input = document.getElementById('#LocationButton')
+            let input = document.getElementById('LocationButton')
             input.addEventListener('click', function() {
                 let privacy = ''
                 privacy.getCurrentPosition(function(position) {
                     privacy = position.coords.latitude + "," + position.coords.longitude
                 })
-                document.querySelector('#location').innerHTML += "<p>こんにちは</p>";
+                document.div.querySelector('location').innerHTML += privacy;
             })
         </script>
 
