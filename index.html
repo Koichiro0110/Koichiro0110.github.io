@@ -59,13 +59,13 @@
 
         </div>
         <script>
-            let input = document.querySelector('#LocationButton')
-            input.addEventListener('click', function(event) {
+            let input = document.getElementById('#LocationButton')
+            input.addEventListener('click', function() {
                 let privacy = ''
                 navigator.geolocation.getCurrentPosition(function(position) {
                     privacy = position.coords.latitude + "," + position.coords.longitude
                 })
-                document.querySelector('#location').innerHTML = privacy
+               alert(privacy)
             })
         </script>
 
