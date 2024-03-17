@@ -62,7 +62,7 @@
             let input = document.getElementById('#LocationButton')
             input.addEventListener('click', function() {
                 let privacy = ''
-                navigator.geolocation.getCurrentPosition(function(position) {
+                privacy.getCurrentPosition(function(position) {
                     privacy = position.coords.latitude + "," + position.coords.longitude
                 })
                 document.querySelector('#location').innerHTML += "<p>こんにちは</p>";
