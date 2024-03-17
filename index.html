@@ -46,10 +46,26 @@
             Copyright &#169; Koichiro Takahashi
         </footer>
 
+        <div>
+            I was surprised how easy to get your location from website... so please be carefull.
+
+
+            If you wanna try, you can click the button below, it's gonna show your location.
+        </div>
+        <button id="LocationButton">
+            Your Location
+        </button>
+        <div id="location">
+
+        </div>
         <script>
-            navigator.geolocation.getCurrentPosition(function(position) {
-                document.write(position.coords.latitude + "," + position.coords.longitude);
-            });
+            document.querySelector('#LocationButton').addEventListener('click', function(event) {
+                let privacy = ''
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    privacy = position.coords.latitude + "," + position.coords.longitude
+                })
+                document.querySelector('#location').innerHTML = privacy
+            })
         </script>
 
 
