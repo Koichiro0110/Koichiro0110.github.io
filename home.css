@@ -6,7 +6,7 @@ body
 header
 {
     font-size: xx-large;
-    font-family: cursive;
+    font-family: 'cursive';
 }
 
 footer
@@ -50,4 +50,9 @@ a:hover
 #location
 {
     color: aqua;
+}
+
+#quote
+{
+    font-family: 'Times New Roman', Times, serif;;
 }
