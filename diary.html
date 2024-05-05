@@ -34,16 +34,14 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-8">
-                <h1>Koichiro's Diary</h1>
-                <p>Here you can find my daily thoughts and updates about physics, life, and more.</p>
-                <!-- Dynamic content loaded here -->
-                <div id="diaryContent"></div>
-            </div>
+    <div class="col-md-8">
+        <h1>Koichiro's Diary</h1>
+        <p>Here you can find my daily thoughts and updates about physics, life, and more.</p>
+        <div id="diaryContent">
+            <!-- Dynamic Markdown content will be loaded here -->
         </div>
     </div>
+    
     
     <footer class="footer mt-auto py-3">
         <div class="container">
@@ -57,15 +55,15 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Example: Fetch the entry for May 4, 2024
             fetch('entries/2024-05-04.md')
             .then(response => response.text())
             .then(text => {
-                const container = document.querySelector('.container');
-                container.innerHTML = marked.parse(text);  // Convert Markdown to HTML and display it
+                const diaryContent = document.querySelector('#diaryContent');
+                diaryContent.innerHTML = marked.parse(text);  // Convert Markdown to HTML and display it
             })
             .catch(error => console.error('Error loading diary entry:', error));
         });
-        </script>          
+    </script>
+         
 </body>
 </html>
