@@ -39,19 +39,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('diary_entries.json')
-            .then(response => response.json())
-            .then(entries => {
+            // Example: Fetch the entry for May 4, 2024
+            fetch('entries/2024-05-04.md')
+            .then(response => response.text())
+            .then(text => {
                 const container = document.querySelector('.container');
-                entries.forEach(entry => {
-                    const postDiv = document.createElement('div');
-                    postDiv.className = 'post';
-                    postDiv.innerHTML = `<h2>${entry.date}</h2><p>${entry.content}</p>`;
-                    container.appendChild(postDiv);
-                });
+                container.innerHTML = marked.parse(text);  // Convert Markdown to HTML and display it
             })
-            .catch(error => console.error('Error loading diary entries:', error));
+            .catch(error => console.error('Error loading diary entry:', error));
         });
-        </script>        
+        </script>          
 </body>
 </html>
