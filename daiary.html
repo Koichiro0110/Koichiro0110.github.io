@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="home.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Koichiro's Diary</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">Koichiro Takahashi</a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="quotes.html">Favorite Quotes</a>
+            <a class="nav-link" href="CV.html">CV</a>
+            <a class="nav-link active" href="diary.html">Diary</a>
+            <button class="language-switch" onclick="location.href='index_jp.html';">日本語</button>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Koichiro's Diary</h1>
+        <p>Here you can find my daily thoughts and updates about physics, life, and more.</p>
+        <!-- Example Entry -->
+        <div class="post">
+            <h2>May 4, 2024</h2>
+            <p>Today I learned something incredible in the field of condensed matter physics...</p>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Copyright © Koichiro Takahashi</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('diary_entries.json')
+            .then(response => response.json())
+            .then(entries => {
+                const container = document.querySelector('.container');
+                entries.forEach(entry => {
+                    const postDiv = document.createElement('div');
+                    postDiv.className = 'post';
+                    postDiv.innerHTML = `<h2>${entry.date}</h2><p>${entry.content}</p>`;
+                    container.appendChild(postDiv);
+                });
+            })
+            .catch(error => console.error('Error loading diary entries:', error));
+        });
+        </script>        
+</body>
+</html>
