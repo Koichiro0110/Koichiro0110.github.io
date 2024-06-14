@@ -22,6 +22,29 @@
         .nav-link:hover, .language-switch:hover {
             color: #0056b3;
         }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+        }
+        .img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .custom-img {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -72,17 +95,44 @@
                 <img src="Figures/Me.jpg" alt="Koichiro Takahashi" class="img-fluid rounded">
             </div>
         </div>
-
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <div class="col-md-6 mb-1">
-                    <iframe src="Figures/Skyrmion1.pdf" width="100%" height="100%" style="border: none;"></iframe>
+        <h2>Gallary</h2>
+        <div div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmion1.jpg" alt="Figure" class="img-fluid custom-img">
                 </div>
-                <div class="col-md-6 mb-1">
-                    <iframe src="Figures/Skyrmion4.pdf" width="100%" height="100%" style="border: none;"></iframe>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmion4.jpg" alt="Figure" class="img-fluid custom-img">
                 </div>
             </div>
         </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmionium1.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmion_rb.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmionium2.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmionium3.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <footer class="footer mt-auto py-3">
