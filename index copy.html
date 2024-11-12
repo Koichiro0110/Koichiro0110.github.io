@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="home.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Koichiro Takahashi's Personal Website</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .navbar, .footer {
+            background-color: #e9ecef;
+        }
+        .navbar-brand, .nav-link, .language-switch {
+            color: #495057;
+        }
+        .navbar-brand:hover, .nav-link:hover, .language-switch:hover {
+            color: #0056b3;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .custom-img {
+            width: 100%;
+            height: 600px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">Koichiro Takahashi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="Figures/CV.pdf" target="_blank">CV</a>
+                <button class="language-switch" onclick="location.href='index_jp.html';" aria-label="Switch to Japanese language">日本語</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>"Physics is surreal"</h1>
+                <p>I am an undergrad physics student at the <a href="https://www.unh.edu/" target="_blank">University of New Hampshire</a> (UNH), USA. Before I transferred to UNH, I was at the <a href="https://en.saitama-u.ac.jp/" target="_blank">Saitama University</a>, Japan. I have been trying to specialize in Condensed Matter Theory but am genuinely interested in any field of theoretical physics, experimental physics, computational physics, mathematical physics, biophysics, information theory, and more.</p>
+                
+                <p>I am applying for PhD programs this winter and am searching for the best fit for my career as a future theoretical physicist. You can find my CV <a href="https://koichiro0110.github.io/Figures/CV.pdf" target="_blank">here</a>.</p>
+                
+                <p>My hometown is Tokyo, Japan, and my first language is Japanese. I love physics, and especially enjoy discussing it with anyone around the world.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="Figures/Me.jpg" alt="Koichiro Takahashi" class="img-fluid rounded">
+            </div>
+        </div>
+        
+        <h2>Gallery</h2>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmion1.jpg" alt="Image of Skyrmion" class="img-fluid custom-img">
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmion4.jpg" alt="Image of Skyrmion in phase" class="img-fluid custom-img">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmionium1.jpg" alt="Skyrmionium configuration" class="img-fluid custom-img">
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmion_rb.jpg" alt="Reverse-bias Skyrmion image" class="img-fluid custom-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Copyright © Koichiro Takahashi</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
