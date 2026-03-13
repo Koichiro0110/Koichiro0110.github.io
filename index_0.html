@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="home.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Koichiro Takahashi's Personal Website</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .navbar, .footer {
+            background-color: #e9ecef;
+        }
+        .nav-link, .language-switch {
+            color: #495057;
+
+        }
+        .nav-link:hover, .language-switch:hover {
+            color: #0056b3;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+        }
+        .img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .custom-img {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">Koichiro Takahashi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="Figures/CV.pdf" target="_blank">CV</a>
+                <button class="language-switch" onclick="location.href='index_jp.html';" aria-label="Switch to Japanese language">日本語</button>
+            </div>
+        </div>
+    </nav>
+    
+    
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>"Physics is surreal"</h1>
+                <p>
+                    <div>
+                        I am a PhD Physics student at the <a href="https://physics.illinois.edu" target="_blank">University of Illinois, Urbana-Champaign</a> (UIUC), USA.
+                        I finished my undergraduate degree in Physics at the <a href="https://ceps.unh.edu/physics-astronomy" target="_blank">University of New Hampshire</a> (UNH), USA.
+                         Before I transferred to UNH, I was at the <a href="https://en.saitama-u.ac.jp/" target="_blank">Saitama University</a>, Japan.
+                        I have been working on multiple projects in condensed matter theory, and interested in topics such as 
+                        superconductivity, magnetism, topological phases of matter etc.
+                    </div>
+                    </p>
+            
+                    <p>
+                    <div>
+                         You can find my CV from <a href="https://koichiro0110.github.io/Figures/CV.pdf" target="_blank">here</a>.
+                    </div>
+                    </p>
+            
+                    <p>
+                    <div>
+                        My hometown is Tokyo, Japan. So my first language is Japanese.
+                    </div>
+                    </p>
+            </div>
+            <div class="col-md-4">
+                <img src="Figures/Portrait.jpg" alt="Koichiro Takahashi" class="img-fluid rounded">
+            </div>
+        </div>
+        <!-- Publications Section -->
+        <h2>Publications</h2>
+        <div class="row mt-4">
+            <div class="col-md-12 mb-3">
+                <h5>GPTArticleExtractor: An Automated Workflow for Magnetic Material Database Construction</h5>
+                <p><strong>Authors:</strong> Yibo Zhang, Suman Itani, Kamal Khanal, Emmanuel Okyere, Gavin Smith, <u>Koichiro Takahashi</u>, Jiadong Zang | <strong>Journal:</strong> Journal of Magnetism and Magnetic Materials, 2024</p>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0304885324002920" target="_blank" class="btn btn-primary">View on ScienceDirect</a>
+        </div>
+            <div class="col-md-12 mb-3">
+                <h5>Inertia in Skyrmions Confined to One-Dimensional Geometries</h5>
+                <p><strong>Authors:</strong> <u>Koichiro Takahashi</u>, Sergey S. Pershoguba, Jiadong Zang | <strong>Platform:</strong> arXiv</p>
+                <a href="https://arxiv.org/abs/2409.17461" target="_blank" class="btn btn-primary">View on arXiv</a>
+            </div>
+        </div>
+        <!-- Posters and Projects Section -->
+        <h2>Posters and Projects</h2>
+        <div class="row mt-4">
+            <div class="col-md-12 mb-3">
+                <h5>Poster: Nonlinear Dynamics of Skyrmion in Helical Lanes</h5>
+                <p>This poster presents my research on the current-driven dynamics of skyrmions confined in helical backgrounds.</p>
+                <a href="Figures/Poster_skyrmion.pdf" target="_blank" class="btn btn-primary">View Poster</a>
+            </div>
+            <div class="col-md-12 mb-3">
+                <h5>Poster: Tight-binding modeling of altermagnet candidate MnTe</h5>
+                <p>This poster presents my research on the tight-binding calculation of MnTe.</p>
+                <a href="Figures/Poster_MnTe.pdf" target="_blank" class="btn btn-primary">View Poster</a>
+            </div>
+        </div>
+        <h2>Gallery</h2>
+        <div div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmion1.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmion4.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmionium1.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmion_rb.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmionium2.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="img-container">
+                    <img src="Figures/Skyrmionium3.jpg" alt="Figure" class="img-fluid custom-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Copyright © Koichiro Takahashi</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

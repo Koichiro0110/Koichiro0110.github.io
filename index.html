@@ -9,14 +9,14 @@
     <style>
         body {
             font-family: "Times New Roman", serif;
-            color: #333;
+            color: #000000;
             background-color: #f8f9fa;
         }
         .navbar, .footer {
             background-color: #e9ecef;
         }
         .nav-link, .language-switch {
-            color: #495057;
+            color: #0a06fa;
 
         }
         .nav-link:hover, .language-switch:hover {
@@ -45,121 +45,247 @@
             height: 600px; /* Adjust height as needed */
             object-fit: contain;
         }
+        .education-list li {
+            padding-left: 1rem;
+            border-left: 3px solid #0317f6;
+        }
+
+        .education-list strong {
+            font-size: 1.05rem;
+            color: #212529;
+        }
+
+        img.rounded {
+            max-width: 100%;
+            height: auto;
+        }
+        .publication-item {
+            padding: 1rem 1.25rem;
+            background-color: #ffffff;
+            border-left: 4px solid #0e02fb;
+            border-radius: 0.4rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .publication-item h5 {
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-item p {
+            margin-bottom: 0.75rem;
+        }
+        .publication-item a {
+            color: #0a06fa;
+            text-decoration: none;
+            margin-left: 0.2rem;
+        }
+
+        .publication-item a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        h3.text-muted {
+            font-size: 1.3rem;
+            color: #6c757d !important;
+        }
+        .profile-card {
+            background-color: #ffffff;
+            border-left: 4px solid #0e02fb;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .profile-card p {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .section-label {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #212529;
+        }
+
+        .profile-card a {
+            color: #0a06fa;
+            text-decoration: none;
+            transition: color 0.2s ease, text-decoration 0.2s ease;
+        }
+
+        .profile-card a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .separator {
+            margin: 0 0.45rem;
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">Koichiro Takahashi</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" href="Figures/CV.pdf" target="_blank">CV</a>
-                <button class="language-switch" onclick="location.href='index_jp.html';" aria-label="Switch to Japanese language">日本語</button>
-            </div>
+    <a class="navbar-brand" href="index.html"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <button class="language-switch" onclick="location.href='index_jp.html';" aria-label="Switch to Japanese language">日本語</button>
+            <a class="nav-link" href="Figures/CV.pdf" target="_blank">CV</a>
+            <a class="nav-link" href="teaching.html">Teaching</a>
+            <a class="nav-link" href="notes.html">Notes</a>
         </div>
+    </div>
     </nav>
     
-    
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-1">Koichiro Takahashi</h1>
+            <h3 class="text-muted mb-4">高橋幸一郎</h3>
+        </div>
+    </div>
+</div>
 
+<div class="container mt-4">
+    <div class="profile-card">
+        <p class="mb-2">
+            <span class="section-label">Profiles</span><br>
+            <a href="https://scholar.google.com/citations?user=o6A2u2MAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+            <span class="separator">•</span>
+            <a href="https://orcid.org/0009-0009-3972-4704" target="_blank">ORCID</a>
+            <span class="separator">•</span>
+            <a href="https://github.com/Koichiro0110" target="_blank">GitHub</a>
+        </p>
+
+        <p class="mb-0">
+            <span class="section-label">Research Interests</span><br>
+            Condensed matter theory, superconductivity, magnetism, and topological phases of matter
+        </p>
+    </div>
+</div>
+    
     <div class="container mt-4">
-        <div class="row">
+        <div class="row align-items-start">
             <div class="col-md-8">
-                <h1>"Physics is surreal"</h1>
-                <p>
-                    <div>
-                        I am a PhD Physics student at the <a href="https://physics.illinois.edu" target="_blank">University of Illinois, Urbana-Champaign</a> (UIUC), USA.
-                        I finished my undergraduate degree in Physics at the <a href="https://ceps.unh.edu/physics-astronomy" target="_blank">University of New Hampshire</a> (UNH), USA.
-                         Before I transferred to UNH, I was at the <a href="https://en.saitama-u.ac.jp/" target="_blank">Saitama University</a>, Japan.
-                        I have been working on multiple projects in condensed matter theory, and interested in topics such as 
-                        superconductivity, magnetism, topological phases of matter etc.
-                    </div>
-                    </p>
-            
-                    <p>
-                    <div>
-                         You can find my CV from <a href="https://koichiro0110.github.io/Figures/CV.pdf" target="_blank">here</a>.
-                    </div>
-                    </p>
-            
-                    <p>
-                    <div>
-                        My hometown is Tokyo, Japan. So my first language is Japanese.
-                    </div>
-                    </p>
-            </div>
-            <div class="col-md-4">
-                <img src="Figures/Me.jpg" alt="Koichiro Takahashi" class="img-fluid rounded">
-            </div>
-        </div>
-        <!-- Publications Section -->
-        <h2>Publications</h2>
-        <div class="row mt-4">
-            <div class="col-md-12 mb-3">
-                <h5>GPTArticleExtractor: An Automated Workflow for Magnetic Material Database Construction</h5>
-                <p><strong>Authors:</strong> Yibo Zhang, Suman Itani, Kamal Khanal, Emmanuel Okyere, Gavin Smith, <u>Koichiro Takahashi</u>, Jiadong Zang | <strong>Journal:</strong> Journal of Magnetism and Magnetic Materials, 2024</p>
-                <a href="https://www.sciencedirect.com/science/article/pii/S0304885324002920" target="_blank" class="btn btn-primary">View on ScienceDirect</a>
-        </div>
-            <div class="col-md-12 mb-3">
-                <h5>Inertia in Skyrmions Confined to One-Dimensional Geometries</h5>
-                <p><strong>Authors:</strong> <u>Koichiro Takahashi</u>, Sergey S. Pershoguba, Jiadong Zang | <strong>Platform:</strong> arXiv</p>
-                <a href="https://arxiv.org/abs/2409.17461" target="_blank" class="btn btn-primary">View on arXiv</a>
-            </div>
-        </div>
-        <!-- Posters and Projects Section -->
-        <h2>Posters and Projects</h2>
-        <div class="row mt-4">
-            <div class="col-md-12 mb-3">
-                <h5>Poster: Nonlinear Dynamics of Skyrmion in Helical Lanes</h5>
-                <p>This poster presents my research on the current-driven dynamics of skyrmions confined in helical backgrounds.</p>
-                <a href="Figures/Poster_skyrmion.pdf" target="_blank" class="btn btn-primary">View Poster</a>
-            </div>
-            <div class="col-md-12 mb-3">
-                <h5>Poster: Tight-binding modeling of altermagnet candidate MnTe</h5>
-                <p>This poster presents my research on the tight-binding calculation of MnTe.</p>
-                <a href="Figures/Poster_MnTe.pdf" target="_blank" class="btn btn-primary">View Poster</a>
-            </div>
-        </div>
-        <h2>Gallery</h2>
-        <div div class="row mt-4">
-            <div class="col-md-6 mb-2">
-                <div class="img-container">
-                    <img src="Figures/Skyrmion1.jpg" alt="Figure" class="img-fluid custom-img">
+                <div class="mt-4">
+                    <h3>Education</h3>
+                    <ul class="list-unstyled education-list">
+                        <li class="mb-3">
+                            <div><strong>University of Illinois Urbana-Champaign</strong>, USA</div>
+                            <div>Ph.D. in Physics, 2025–present</div>
+                        </li>
+                        <li class="mb-3">
+                            <div><strong>University of New Hampshire</strong>, USA</div>
+                            <div>B.S. in Physics, 2023–2024</div>
+                        </li>
+                        <li class="mb-3">
+                            <div><strong>University of New Hampshire</strong>, USA</div>
+                            <div>Exchange Study in Physics, 2022–2023</div>
+                        </li>
+                        <li class="mb-3">
+                            <div><strong>Saitama University</strong>, Japan</div>
+                            <div>Undergraduate Study in Physics, 2021–2022</div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-6 mb-2">
-                <div class="img-container">
-                    <img src="Figures/Skyrmion4.jpg" alt="Figure" class="img-fluid custom-img">
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6 mb-2">
-                <div class="img-container">
-                    <img src="Figures/Skyrmionium1.jpg" alt="Figure" class="img-fluid custom-img">
-                </div>
-            </div>
-            <div class="col-md-6 mb-2">
-                <div class="img-container">
-                    <img src="Figures/Skyrmion_rb.jpg" alt="Figure" class="img-fluid custom-img">
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6 mb-2">
-                <div class="img-container">
-                    <img src="Figures/Skyrmionium2.jpg" alt="Figure" class="img-fluid custom-img">
-                </div>
-            </div>
-            <div class="col-md-6 mb-2">
-                <div class="img-container">
-                    <img src="Figures/Skyrmionium3.jpg" alt="Figure" class="img-fluid custom-img">
-                </div>
+
+            <div class="col-md-4 text-center">
+                <img src="Figures/Portrait.jpg" alt="Koichiro Takahashi" class="img-fluid rounded">
             </div>
         </div>
     </div>
+<div class="container mt-5">
+    <!-- Publications -->
+    <div class="mt-4">
+        <h3>Publications</h3>
+
+        <div class="publication-item mb-4">
+            <h5>Symmetry and minimal Hamiltonian of nonsymmorphic collinear antiferromagnet MnTe</h5>
+            <p>
+                Koichiro Takahashi, Hong-Fei Huang, Jie-Xiang Yu, and Jiadong Zang<br>
+                <a href="https://doi.org/10.1038/s41535-025-00784-1" target="_blank">
+                    <em>npj Quantum Materials</em>
+                </a>
+                <strong>10</strong>, 70 (2025)
+            </p>
+        </div>
+
+        <div class="publication-item mb-4">
+            <h5>GPTArticleExtractor: An automated workflow for magnetic material database construction</h5>
+            <p>
+                Yibo Zhang, Suman Itani, Kamal Khanal, Emmanuel Okyere, Gavin Smith,
+                Koichiro Takahashi, and Jiadong Zang<br>
+                <a href="https://doi.org/10.1016/j.jmmm.2024.172001" target="_blank">
+                    <em>Journal of Magnetism and Magnetic Materials</em>
+                </a>
+                <strong>597</strong>, 172001 (2024)
+            </p>
+        </div>
     </div>
+
+    <!-- Preprint -->
+    <div class="mt-5">
+        <h3>Preprint</h3>
+
+        <div class="publication-item mb-4">
+            <h5>Inertia in skyrmions confined to one-dimensional geometries</h5>
+            <p>
+                Koichiro Takahashi, Sergey S. Pershoguba, and Jiadong Zang<br>
+                <a href="https://doi.org/10.48550/arXiv.2409.17461" target="_blank">
+                    <em>arXiv:2409.17461</em>
+                </a>
+                (2024)
+            </p>
+        </div>
+    </div>
+
+    <!-- Poster Presentations -->
+    <div class="mt-5">
+        <h3>Poster Presentations</h3>
+
+        <div class="publication-item mb-3">
+            <h5>Symmetry and Minimal Hamiltonian of Nonsymmorphic Collinear Antiferromagnet MnTe</h5>
+            <p>
+                Spring School of Computational Physics 2025, Okinawa, Japan
+            </p>
+        </div>
+
+        <div class="publication-item mb-3">
+            <h5>Tight-binding modeling of altermagnet candidate MnTe</h5>
+            <p>
+                Northeast Quantum Forum (NEQT) 2024, University of New Hampshire<br>
+                <a href="Figures/Poster_MnTe.pdf" target="_blank">
+                    <em>Poster PDF</em>
+                </a>
+            </p>
+        </div>
+
+        <div class="publication-item mb-3">
+            <h5>Nonlinear dynamics of skyrmion in helical lanes</h5>
+            <p>
+                UNH Undergraduate Research Conference (URC), University of New Hampshire<br>
+                <a href="Figures/Poster_skyrmion.pdf" target="_blank">
+                    <em>Poster PDF</em>
+                </a>
+            </p>
+        </div>
+
+        <div class="publication-item mb-3">
+            <h5>Nonlinear dynamics of skyrmion in helical lanes</h5>
+            <p>
+                2024 US Quantum Information Science Summer School, Oak Ridge National Laboratory
+            </p>
+        </div>
+    </div>
+</div>
 
     <footer class="footer mt-auto py-3">
         <div class="container">
