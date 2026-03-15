@@ -5,41 +5,274 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Koichiro Takahashi's Personal Website</title>
+    <title>高橋幸一郎 | 個人ウェブサイト</title>
     <style>
         body {
             font-family: "Times New Roman", serif;
-            color: #333;
+            color: #000000;
             background-color: #f8f9fa;
         }
         .navbar, .footer {
             background-color: #e9ecef;
         }
         .nav-link, .language-switch {
-            color: #495057;
+            color: #0a06fa;
         }
         .nav-link:hover, .language-switch:hover {
             color: #0056b3;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .custom-img {
+            width: 100%;
+            height: 600px;
+            object-fit: contain;
+        }
+        .education-list li {
+            padding-left: 1rem;
+            border-left: 3px solid #0317f6;
+        }
+        .education-list strong {
+            font-size: 1.05rem;
+            color: #212529;
+        }
+        img.rounded {
+            max-width: 100%;
+            height: auto;
+        }
+        .publication-item {
+            padding: 1rem 1.25rem;
+            background-color: #ffffff;
+            border-left: 4px solid #0e02fb;
+            border-radius: 0.4rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .publication-item h5 {
+            margin-bottom: 0.5rem;
+        }
+        .publication-item p {
+            margin-bottom: 0.75rem;
+        }
+        .publication-item a {
+            color: #0a06fa;
+            text-decoration: none;
+            margin-left: 0.2rem;
+        }
+        .publication-item a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        h3.text-muted {
+            font-size: 1.3rem;
+            color: #6c757d !important;
+        }
+        .profile-card {
+            background-color: #ffffff;
+            border-left: 4px solid #0e02fb;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        .profile-card p {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+        .section-label {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #212529;
+        }
+        .profile-card a {
+            color: #0a06fa;
+            text-decoration: none;
+            transition: color 0.2s ease, text-decoration 0.2s ease;
+        }
+        .profile-card a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .separator {
+            margin: 0 0.45rem;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index_jp.html">高橋幸一郎</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index_jp.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="ナビゲーション切替">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" href="Figures/略歴書.pdf" target="_blank">略歴書</a>
-                <button class="language-switch" onclick="location.href='index.html';">English</button>
+                <button class="language-switch" onclick="location.href='index.html';" aria-label="Switch to English language">English</button>
+                <a class="nav-link" href="Figures/CV.pdf" target="_blank">CV</a>
+                <a class="nav-link" href="teaching.html">教育</a>
+                <a class="nav-link" href="notes.html">ノート</a>
             </div>
         </div>
     </nav>
     
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-1">高橋 幸一郎</h1>
+                <h3 class="text-muted mb-4">Koichiro Takahashi</h3>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="Figures/Portrait.jpg" alt="高橋幸一郎" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
 
     <div class="container mt-4">
-        <h1>"Physics is surreal"</h1>
+        <div class="profile-card">
+            <p class="mb-2">
+                <span class="section-label">プロフィール</span><br>
+                <a href="https://scholar.google.com/citations?user=o6A2u2MAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+                <span class="separator">•</span>
+                <a href="https://orcid.org/0009-0009-3972-4704" target="_blank">ORCID</a>
+                <span class="separator">•</span>
+                <a href="https://github.com/Koichiro0110" target="_blank">GitHub</a>
+            </p>
+
+            <p class="mb-0">
+                <span class="section-label">興味のある研究分野</span><br>
+                物性理論、超伝導、磁性、トポロジカル相
+            </p>
+        </div>
+    </div>
+    
+    <div class="container mt-4">
+        <div class="row align-items-start">
+            <div class="col-md-8">
+                <div class="mt-4">
+                    <h3>学歴</h3>
+                    <ul class="list-unstyled education-list">
+                        <li class="mb-3">
+                            <div><strong>イリノイ大学アーバナ・シャンペーン校</strong>（米国）</div>
+                            <div>博士課程（物理学）, 2025年–現在</div>
+                        </li>
+                        <li class="mb-3">
+                            <div><strong>ニューハンプシャー大学</strong>（米国）</div>
+                            <div>学士（物理学）, 2023年–2024年</div>
+                        </li>
+                        <li class="mb-3">
+                            <div><strong>ニューハンプシャー大学</strong>（米国）</div>
+                            <div>交換留学（物理学）, 2022年–2023年</div>
+                        </li>
+                        <li class="mb-3">
+                            <div><strong>埼玉大学</strong>（日本）</div>
+                            <div>学士課程（物理学）, 2021年–2022年</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <!-- Publications -->
+        <div class="mt-4">
+            <h3>論文</h3>
+
+            <div class="publication-item mb-4">
+                <h5>Symmetry and minimal Hamiltonian of nonsymmorphic collinear antiferromagnet MnTe</h5>
+                <p>
+                    Koichiro Takahashi, Hong-Fei Huang, Jie-Xiang Yu, and Jiadong Zang<br>
+                    <a href="https://doi.org/10.1038/s41535-025-00784-1" target="_blank">
+                        <em>npj Quantum Materials</em>
+                    </a>
+                    <strong>10</strong>, 70 (2025)
+                </p>
+            </div>
+
+            <div class="publication-item mb-4">
+                <h5>GPTArticleExtractor: An automated workflow for magnetic material database construction</h5>
+                <p>
+                    Yibo Zhang, Suman Itani, Kamal Khanal, Emmanuel Okyere, Gavin Smith,
+                    Koichiro Takahashi, and Jiadong Zang<br>
+                    <a href="https://doi.org/10.1016/j.jmmm.2024.172001" target="_blank">
+                        <em>Journal of Magnetism and Magnetic Materials</em>
+                    </a>
+                    <strong>597</strong>, 172001 (2024)
+                </p>
+            </div>
+        </div>
+
+        <!-- Preprint -->
+        <div class="mt-5">
+            <h3>プレプリント</h3>
+
+            <div class="publication-item mb-4">
+                <h5>Inertia in skyrmions confined to one-dimensional geometries</h5>
+                <p>
+                    Koichiro Takahashi, Sergey S. Pershoguba, and Jiadong Zang<br>
+                    <a href="https://doi.org/10.48550/arXiv.2409.17461" target="_blank">
+                        <em>arXiv:2409.17461</em>
+                    </a>
+                    (2024)
+                </p>
+            </div>
+        </div>
+
+        <!-- Poster Presentations -->
+        <div class="mt-5">
+            <h3>ポスター発表</h3>
+
+            <div class="publication-item mb-3">
+                <h5>Symmetry and Minimal Hamiltonian of Nonsymmorphic Collinear Antiferromagnet MnTe</h5>
+                <p>
+                    Spring School of Computational Physics 2025, 沖縄, 日本
+                </p>
+            </div>
+
+            <div class="publication-item mb-3">
+                <h5>Tight-binding modeling of altermagnet candidate MnTe</h5>
+                <p>
+                    Northeast Quantum Forum (NEQT) 2024, University of New Hampshire<br>
+                    <a href="Figures/Poster_MnTe.pdf" target="_blank">
+                        <em>ポスター PDF</em>
+                    </a>
+                </p>
+            </div>
+
+            <div class="publication-item mb-3">
+                <h5>Nonlinear dynamics of skyrmion in helical lanes</h5>
+                <p>
+                    UNH Undergraduate Research Conference (URC), University of New Hampshire<br>
+                    <a href="Figures/Poster_skyrmion.pdf" target="_blank">
+                        <em>ポスター PDF</em>
+                    </a>
+                </p>
+            </div>
+
+            <div class="publication-item mb-3">
+                <h5>Nonlinear dynamics of skyrmion in helical lanes</h5>
+                <p>
+                    2024 US Quantum Information Science Summer School, Oak Ridge National Laboratory
+                </p>
+            </div>
+        </div>
     </div>
 
     <footer class="footer mt-auto py-3">
